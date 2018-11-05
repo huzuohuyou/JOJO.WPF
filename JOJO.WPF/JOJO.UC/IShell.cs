@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sugar.WPF
+namespace JOJO.UC
 {
     public interface IShell
     {

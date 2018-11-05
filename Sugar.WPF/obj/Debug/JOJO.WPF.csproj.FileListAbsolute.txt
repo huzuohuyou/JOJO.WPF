@@ -75,3 +75,8 @@ D:\GitHub\JOJO.WPF\Sugar.WPF\obj\Debug\Views\MainWindowView.baml
 D:\GitHub\JOJO.WPF\Sugar.WPF\obj\Debug\Sugar.WPF.g.resources
 D:\GitHub\JOJO.WPF\Sugar.WPF\obj\Debug\Sugar.WPF.Properties.Resources.resources
 D:\GitHub\JOJO.WPF\Sugar.WPF\obj\Debug\JOJO.WPF.csproj.GenerateResource.Cache
+D:\GitHub\JOJO.WPF\Sugar.WPF\obj\Debug\Areas\System\Views\TabControlsView.baml
+D:\GitHub\JOJO.WPF\Sugar.WPF\obj\Debug\Areas\System\Views\TabControlsView.g.cs
+D:\GitHub\JOJO.WPF\Sugar.WPF\bin\Debug\Panuon.UI.pdb
+D:\GitHub\JOJO.WPF\Sugar.WPF\bin\Debug\JOJO.UC.dll
+D:\GitHub\JOJO.WPF\Sugar.WPF\bin\Debug\JOJO.UC.pdb

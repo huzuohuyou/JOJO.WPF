@@ -31,10 +31,20 @@
             </ScrollViewer>
 
         </DockPanel>
-        <DockPanel Grid.Column="1" LastChildFill="False" Grid.Row="1">
-            <ContentControl  Grid.Column="1"
-                         ClipToBounds="True"
-                         x:Name="ActiveItem" Width="618"/>
+        <DockPanel Grid.Column="1" LastChildFill="False" Grid.Row="1" >
+            <DockPanel Width="618">
+
+                <ContentControl 
+                    ClipToBounds="True"
+                    x:Name="ActiveItem2" DockPanel.Dock="Top" MinHeight="50" Height="50">
+                    <pu:PUTabControl BindingItems="{Binding TabItemList,Mode=TwoWay}" Background="{x:Null}"/>
+                </ContentControl>
+
+                <ContentControl
+                    ClipToBounds="True"
+                    x:Name="ActiveItem" DockPanel.Dock="Bottom" MinHeight="50" Height="292" Background="#FFCF98EE">
+                </ContentControl>
+            </DockPanel>
         </DockPanel>
 
     </Grid>

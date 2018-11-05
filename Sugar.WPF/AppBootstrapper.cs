@@ -8,6 +8,7 @@ using System.ComponentModel.Composition.Hosting;
 using System.ComponentModel.Composition.Primitives;
 using System.Windows;
 using Panuon.UI;
+using JOJO.UC;
 
 namespace Sugar.WPF
 {
