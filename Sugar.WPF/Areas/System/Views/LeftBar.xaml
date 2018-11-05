@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="Sugar.WPF.Areas.System.Views.LeftBar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Sugar.WPF.Areas.System.Views"
+             xmlns:pu="clr-namespace:Panuon.UI;assembly=Panuon.UI"
+             xmlns:cm="http://www.caliburnproject.org"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid Margin="0,0,10,0">
+        <pu:PUTreeView cm:Message.Attach="[Event ChoosedItemChanged]=[Action ChoosedItemChanged($eventArgs)]"
+                                               BindingItems="{Binding TreeViewItems}"
+                                               ChoosedValuePath="Value"
+                                               ChoosedValue="{Binding ChoosedValue,Mode=TwoWay}" Height="247" Margin="10,0,10,53"/>
+    </Grid>
+</UserControl>

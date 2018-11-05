@@ -1,0 +1,56 @@
+﻿<controls:MetroWindow x:Class="Sugar.WPF.Views.Account.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Sugar.WPF"
+        xmlns:controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:pu="clr-namespace:Panuon.UI;assembly=Panuon.UI"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="566" Width="966" Icon="/Sugar.WPF;component/Content/Images/icon.png" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid Background="White">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="336"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="1" Margin="56,180,61,0" Height="164" VerticalAlignment="Top">
+                <pu:PUPasswordBox MaxLength="16"
+                    Icon="P"
+                    PasswordBoxStyle="IconGroup"
+                    Watermark="密码"
+                    Width="219"
+                    Height="30"
+                    HorizontalAlignment="Left"
+                    Foreground="#FF49A9C0"
+                    BorderBrush="#FF49A9C0"
+                    ShadowColor="#FF49A9C0"
+                    BorderCornerRadius="3" Margin="0,87,0,47"/>
+                <pu:PUButton Content="立即登录"  Click="login"
+                    Width="219"
+                    Height="30"
+                    HorizontalAlignment="Left"
+                    Background="#FF0099CC"
+                    BorderCornerRadius="3" Margin="0,134,0,0"/>
+                <pu:PUTextBox
+                    Icon="U"
+                    Watermark="用户名"
+                    Width="219"
+                    Height="30"
+                    HorizontalAlignment="Left"
+                    Foreground="#FF49A9C0"
+                    BorderBrush="#FF49A9C0"
+                    ShadowColor="#FF49A9C0"
+                    BorderCornerRadius="3" TextBoxStyle="IconGroup" Margin="0,41,0,93"/>
+                <Label x:Name="label" Content="登录" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Width="97" FontSize="25" FontFamily="Microsoft JhengHei UI" Margin="62,0,60,123"/>
+            </Grid>
+            <Image x:Name="image" HorizontalAlignment="Left" Margin="142,59,0,0" VerticalAlignment="Top" Height="0" Width="0"/>
+            <DockPanel LastChildFill="False">
+                <DockPanel.Background>
+                    <ImageBrush ImageSource="/Sugar.WPF;component/Content/Images/bg01.png" Stretch="UniformToFill"/>
+                </DockPanel.Background>
+            </DockPanel>
+
+        </Grid>
+    </Grid>
+</controls:MetroWindow>

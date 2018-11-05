@@ -1,0 +1,41 @@
+﻿<controls:MetroWindow x:Class="Sugar.WPF.Views.MainWindowView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:local="clr-namespace:Sugar.WPF"
+        xmlns:pu="clr-namespace:Panuon.UI;assembly=Panuon.UI"
+        xmlns:cm="http://www.caliburnproject.org"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="455.714" Width="826.429" WindowState="Maximized" >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="69"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <DockPanel LastChildFill="False" Margin="0" Grid.ColumnSpan="2" Background="#FF009FD9"/>
+        <DockPanel LastChildFill="False" Grid.Row="1" Background="#FF3A3E4A">
+            <ScrollViewer
+                                          Width="200"
+                                          VerticalScrollBarVisibility="Auto"
+                                          HorizontalScrollBarVisibility="Disabled">
+                <pu:PUTreeView Background="#FF083C6A" cm:Message.Attach="[Event ChoosedItemChanged]=[Action ChoosedItemChanged($eventArgs)]"
+                                               BindingItems="{Binding TreeViewItems}"
+                                               ChoosedValuePath="Value"
+                                               ChoosedValue="{Binding ChoosedValue,Mode=TwoWay}" CoverBrush="{x:Null}" ChoosedBrush="#009fd9" Foreground="White"/>
+            </ScrollViewer>
+
+        </DockPanel>
+        <DockPanel Grid.Column="1" LastChildFill="False" Grid.Row="1">
+            <ContentControl  Grid.Column="1"
+                         ClipToBounds="True"
+                         x:Name="ActiveItem" Width="618"/>
+        </DockPanel>
+
+    </Grid>
+</controls:MetroWindow>
