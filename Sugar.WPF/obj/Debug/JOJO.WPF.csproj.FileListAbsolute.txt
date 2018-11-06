@@ -49,16 +49,6 @@ D:\GitHub\JOJO.WPF\Sugar.WPF\bin\Debug\ControlzEx.pdb
 D:\GitHub\JOJO.WPF\Sugar.WPF\bin\Debug\MahApps.Metro.pdb
 D:\GitHub\JOJO.WPF\Sugar.WPF\bin\Debug\MahApps.Metro.xml
 D:\GitHub\JOJO.WPF\Sugar.WPF\bin\Debug\Newtonsoft.Json.xml
-D:\GitHub\JOJO.WPF\Sugar.WPF\bin\Debug\de\System.Windows.Interactivity.resources.dll
-D:\GitHub\JOJO.WPF\Sugar.WPF\bin\Debug\en\System.Windows.Interactivity.resources.dll
-D:\GitHub\JOJO.WPF\Sugar.WPF\bin\Debug\es\System.Windows.Interactivity.resources.dll
-D:\GitHub\JOJO.WPF\Sugar.WPF\bin\Debug\fr\System.Windows.Interactivity.resources.dll
-D:\GitHub\JOJO.WPF\Sugar.WPF\bin\Debug\it\System.Windows.Interactivity.resources.dll
-D:\GitHub\JOJO.WPF\Sugar.WPF\bin\Debug\ja\System.Windows.Interactivity.resources.dll
-D:\GitHub\JOJO.WPF\Sugar.WPF\bin\Debug\ko\System.Windows.Interactivity.resources.dll
-D:\GitHub\JOJO.WPF\Sugar.WPF\bin\Debug\ru\System.Windows.Interactivity.resources.dll
-D:\GitHub\JOJO.WPF\Sugar.WPF\bin\Debug\zh-Hans\System.Windows.Interactivity.resources.dll
-D:\GitHub\JOJO.WPF\Sugar.WPF\bin\Debug\zh-Hant\System.Windows.Interactivity.resources.dll
 D:\GitHub\JOJO.WPF\Sugar.WPF\obj\Debug\JOJO.WPF.csprojResolveAssemblyReference.cache
 D:\GitHub\JOJO.WPF\Sugar.WPF\obj\Debug\Areas\System\Views\TreeViewsView.baml
 D:\GitHub\JOJO.WPF\Sugar.WPF\obj\Debug\Areas\System\Views\TreeViewsView.g.cs
@@ -80,3 +70,9 @@ D:\GitHub\JOJO.WPF\Sugar.WPF\obj\Debug\Areas\System\Views\TabControlsView.g.cs
 D:\GitHub\JOJO.WPF\Sugar.WPF\bin\Debug\Panuon.UI.pdb
 D:\GitHub\JOJO.WPF\Sugar.WPF\bin\Debug\JOJO.UC.dll
 D:\GitHub\JOJO.WPF\Sugar.WPF\bin\Debug\JOJO.UC.pdb
+D:\GitHub\JOJO.WPF\Sugar.WPF\bin\Debug\Caliburn.Micro.dll
+D:\GitHub\JOJO.WPF\Sugar.WPF\bin\Debug\Caliburn.Micro.Platform.Core.dll
+D:\GitHub\JOJO.WPF\Sugar.WPF\bin\Debug\Caliburn.Micro.Platform.dll
+D:\GitHub\JOJO.WPF\Sugar.WPF\bin\Debug\ControlzEx.dll
+D:\GitHub\JOJO.WPF\Sugar.WPF\bin\Debug\MahApps.Metro.dll
+D:\GitHub\JOJO.WPF\Sugar.WPF\bin\Debug\Newtonsoft.Json.dll
