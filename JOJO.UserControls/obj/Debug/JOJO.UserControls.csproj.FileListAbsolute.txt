@@ -1,0 +1,10 @@
+D:\GitHub\JOJO.WPF\JOJO.UserControls\bin\Debug\JOJO.UserControls.dll
+D:\GitHub\JOJO.WPF\JOJO.UserControls\bin\Debug\JOJO.UserControls.pdb
+D:\GitHub\JOJO.WPF\JOJO.UserControls\obj\Debug\UserControlDemo.g.cs
+D:\GitHub\JOJO.WPF\JOJO.UserControls\obj\Debug\JOJO.UserControls_MarkupCompile.cache
+D:\GitHub\JOJO.WPF\JOJO.UserControls\obj\Debug\JOJO.UserControls_MarkupCompile.lref
+D:\GitHub\JOJO.WPF\JOJO.UserControls\obj\Debug\UserControlDemo.baml
+D:\GitHub\JOJO.WPF\JOJO.UserControls\obj\Debug\JOJO.UserControls.g.resources
+D:\GitHub\JOJO.WPF\JOJO.UserControls\obj\Debug\JOJO.UserControls.dll
+D:\GitHub\JOJO.WPF\JOJO.UserControls\obj\Debug\JOJO.UserControls.pdb
+D:\GitHub\JOJO.WPF\JOJO.UserControls\obj\Debug\JOJO.UserControls.csprojResolveAssemblyReference.cache

@@ -4,14 +4,14 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:JOJO.UC.Views"
-              xmlns:cal="http://www.caliburnproject.org"
+             xmlns:cal="http://www.caliburnproject.org"
              xmlns:cm="http://www.caliburnproject.org"
         
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid HorizontalAlignment="Left" Height="280" Margin="10,10,0,0" VerticalAlignment="Top" Width="280">
         <ScrollViewer HorizontalAlignment="Left" Height="260" Margin="10,10,0,0" VerticalAlignment="Top" Width="260" Background="White">
-            <Label x:Name="label" Content="首页"/>
+            <Label x:Name="label" Content="首页" Width="260"/>
         </ScrollViewer>
     </Grid>
 

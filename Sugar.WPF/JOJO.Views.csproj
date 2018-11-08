@@ -24,6 +24,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -97,6 +98,10 @@
     <Compile Include="Views\Account\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
+    <Page Include="Areas\System\Views\IndexView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Areas\System\Views\TabControlsView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -175,9 +180,13 @@
       <Project>{72b3698e-1784-4101-99ae-fc7b8f48e96d}</Project>
       <Name>Panuon.UI</Name>
     </ProjectReference>
-    <ProjectReference Include="..\JOJO.WPF\JOJO.UC\JOJO.UC.csproj">
+    <ProjectReference Include="..\JOJO.UC\JOJO.ViewModels.csproj">
       <Project>{57be6eba-e125-4c07-a022-e316ed87a8ad}</Project>
-      <Name>JOJO.UC</Name>
+      <Name>JOJO.ViewModels</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JOJO.UserControls\JOJO.UserControls.csproj">
+      <Project>{1c935bb3-037a-4034-a3ff-db120b1b4188}</Project>
+      <Name>JOJO.UserControls</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

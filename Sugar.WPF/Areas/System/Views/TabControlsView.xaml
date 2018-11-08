@@ -5,11 +5,11 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:cal="http://www.caliburnproject.org"
              xmlns:pu="clr-namespace:Panuon.UI;assembly=Panuon.UI"
-             mc:Ignorable="d" Width="Auto">
+             mc:Ignorable="d" Width="Auto" >
     <!---从http://www.fontawesome.com.cn/cheatsheet/上复制图标-->
     <ScrollViewer VerticalScrollBarVisibility="Auto"
-                  HorizontalScrollBarVisibility="Disabled">
-        <pu:PUTabControl BindingItems="{Binding TabItemList,Mode=TwoWay}" Background="{x:Null}"/>
+                  HorizontalScrollBarVisibility="Disabled" >
+        <pu:PUTabControl  Height="620" BindingItems="{Binding TabItemList,Mode=TwoWay}" Background="{x:Null}" Margin="0"/>
 
     </ScrollViewer>
 </UserControl>

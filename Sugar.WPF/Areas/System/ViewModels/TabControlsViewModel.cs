@@ -1,26 +1,26 @@
 ﻿using Caliburn.Micro;
 using JOJO.UC;
+using JOJO.UserControls;
 using Panuon.UI;
-using Sugar.WPF;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Panuon.UIBrowser.ViewModels.Partial
 {
     public class TabControlsViewModel : Screen, IShell
     {
+
         public TabControlsViewModel()
         {
+            var d = new UserControlDemo();
             var list = new List<PUTabItemModel>();
             list.Add(new PUTabItemModel()
             {
                 Header = "Test1",
                 Icon = "",
                 CanDelete = false,
-                Content = "1",
+                Content = d,
                 Value = 1.1,
+                
             });
             list.Add(new ButtonsViewModel()
             {

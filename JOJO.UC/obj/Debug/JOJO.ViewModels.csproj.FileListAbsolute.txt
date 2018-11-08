@@ -1,0 +1,13 @@
+D:\GitHub\JOJO.WPF\JOJO.UC\bin\Debug\Caliburn.Micro.dll
+D:\GitHub\JOJO.WPF\JOJO.UC\bin\Debug\Caliburn.Micro.Platform.Core.dll
+D:\GitHub\JOJO.WPF\JOJO.UC\bin\Debug\Caliburn.Micro.Platform.dll
+D:\GitHub\JOJO.WPF\JOJO.UC\bin\Debug\Newtonsoft.Json.dll
+D:\GitHub\JOJO.WPF\JOJO.UC\bin\Debug\System.Windows.Interactivity.dll
+D:\GitHub\JOJO.WPF\JOJO.UC\bin\Debug\Caliburn.Micro.xml
+D:\GitHub\JOJO.WPF\JOJO.UC\bin\Debug\Caliburn.Micro.Platform.xml
+D:\GitHub\JOJO.WPF\JOJO.UC\bin\Debug\Caliburn.Micro.Platform.Core.xml
+D:\GitHub\JOJO.WPF\JOJO.UC\bin\Debug\Newtonsoft.Json.xml
+D:\GitHub\JOJO.WPF\JOJO.UC\bin\Debug\JOJO.ViewModels.dll
+D:\GitHub\JOJO.WPF\JOJO.UC\bin\Debug\JOJO.ViewModels.pdb
+D:\GitHub\JOJO.WPF\JOJO.UC\obj\Debug\JOJO.ViewModels.dll
+D:\GitHub\JOJO.WPF\JOJO.UC\obj\Debug\JOJO.ViewModels.pdb

@@ -7,8 +7,8 @@
     <ProjectGuid>{57BE6EBA-E125-4C07-A022-E316ED87A8AD}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>JOJO.UC</RootNamespace>
-    <AssemblyName>JOJO.UC</AssemblyName>
+    <RootNamespace>JOJO.ViewModels</RootNamespace>
+    <AssemblyName>JOJO.ViewModels</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -70,12 +70,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Page Include="Views\IndexView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

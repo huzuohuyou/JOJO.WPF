@@ -31,20 +31,44 @@
             </ScrollViewer>
 
         </DockPanel>
-        <DockPanel Grid.Column="1" LastChildFill="False" Grid.Row="1" >
-            <DockPanel Width="618">
+        <DockPanel Grid.Column="1" LastChildFill="True" Grid.Row="1" >
+                <ContentControl
+                    ClipToBounds="True"
+                    x:Name="ActiveItem" DockPanel.Dock="Top"  MinHeight="50"  Background="#FF8649A8"/>
+                
+            <!--<Grid DockPanel.Dock="Top" Margin="0,0,0,0" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <DockPanel LastChildFill="False" Margin="10" Background="#FF47B8EE">
+                    <ContentControl 
+                    ClipToBounds="True"
+                    x:Name="ActiveItem2" DockPanel.Dock="Top" MinHeight="5" Height="5" Background="#FF6D73B0">
+                        <pu:PUTabControl BindingItems="{Binding TabItemList,Mode=TwoWay}" Background="{x:Null}"/>
+                    </ContentControl>
+                </DockPanel>
+                <DockPanel LastChildFill="False" Margin="10,10,10,0" Grid.Row="1" Background="#FF59B5B9">
+                    <ContentControl
+                    ClipToBounds="True"
+                    x:Name="ActiveItem" DockPanel.Dock="Top" MinHeight="50" Height="341" Background="#FFBB5CF0"/>
+
+                </DockPanel>
+            </Grid>-->
+            <!--<DockPanel Width="618" DockPanel.Dock="Top">
 
                 <ContentControl 
                     ClipToBounds="True"
-                    x:Name="ActiveItem2" DockPanel.Dock="Top" MinHeight="50" Height="50">
+                    x:Name="ActiveItem2" DockPanel.Dock="Top" MinHeight="5" Height="5" Background="#FF6D73B0">
                     <pu:PUTabControl BindingItems="{Binding TabItemList,Mode=TwoWay}" Background="{x:Null}"/>
                 </ContentControl>
-
-                <ContentControl
+                <DockPanel Background="#FFE05E5E" DockPanel.Dock="Top">
+                    <ContentControl
                     ClipToBounds="True"
-                    x:Name="ActiveItem" DockPanel.Dock="Bottom" MinHeight="50" Height="292" Background="#FFCF98EE">
-                </ContentControl>
-            </DockPanel>
+                    x:Name="ActiveItem" DockPanel.Dock="Top" MinHeight="50" Height="341" Background="#FF8649A8"/>
+                </DockPanel>
+                
+            </DockPanel>-->
         </DockPanel>
 
     </Grid>

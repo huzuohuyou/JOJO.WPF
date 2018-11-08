@@ -1,5 +1,6 @@
 ﻿using Caliburn.Micro;
 using JOJO.UC;
+using JOJO.UC.ViewModels;
 using Panuon.UI;
 using Panuon.UIBrowser.ViewModels.Partial;
 using Sugar.WPF.Areas.System.Models;
@@ -19,13 +20,14 @@ namespace Sugar.WPF.ViewModels
     public class MainWindowViewModel : Conductor<IShell>.Collection.OneActive, IShell
     {
         List<PUTabItemModel> tablist = new List<PUTabItemModel>() ;
-        PUTabItemModel defaultTabItem = new PUTabItemModel() {Header ="系统首页" };
+        static IndexViewModel indexvm = new IndexViewModel();
+        PUTabItemModel defaultTabItem = new PUTabItemModel() { Header = "系统首页", CanDelete = false,Content= indexvm };
         public MainWindowViewModel()
         {
             TreeViewItems = new ObservableCollection<PUTreeViewItemModel>();
             LoadTreeView();
-            LoadTabControlsView(defaultTabItem);
-            //ActivateItem(new TabControlsViewModel());
+            //LoadTabControlsView(defaultTabItem);
+            ActivateItem(new TabControlsViewModel());
         }
 
         public void LoadTabControlsView(PUTabItemModel model)
@@ -78,7 +80,9 @@ namespace Sugar.WPF.ViewModels
                 //命名空间.类型名
                 string fullName = nameSpace + "." + className;
                 //加载程序集，创建程序集里面的 命名空间.类型名 实例
-                object ect = Assembly.LoadFile($@"{Environment.CurrentDirectory}\\JOJO.UC.dll").CreateInstance(fullName, true, BindingFlags.Default, null, parameters, null, null);
+                
+
+                object ect = Assembly.LoadFrom($@"{Environment.CurrentDirectory}\JOJO.UC.dll").CreateInstance(fullName);
                 //类型转换并返回
                 return (T)ect;
             }

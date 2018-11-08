@@ -76,3 +76,5 @@ D:\GitHub\JOJO.WPF\Sugar.WPF\bin\Debug\Caliburn.Micro.Platform.dll
 D:\GitHub\JOJO.WPF\Sugar.WPF\bin\Debug\ControlzEx.dll
 D:\GitHub\JOJO.WPF\Sugar.WPF\bin\Debug\MahApps.Metro.dll
 D:\GitHub\JOJO.WPF\Sugar.WPF\bin\Debug\Newtonsoft.Json.dll
+D:\GitHub\JOJO.WPF\Sugar.WPF\obj\Debug\Areas\System\Views\IndexView.g.cs
+D:\GitHub\JOJO.WPF\Sugar.WPF\obj\Debug\Areas\System\Views\IndexView.baml
