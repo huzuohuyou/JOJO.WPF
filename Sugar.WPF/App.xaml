@@ -10,6 +10,8 @@
                     <!--AppBootstrapper启动器 StartupUri="MainWindow.xaml"-->
                     <local:AppBootstrapper x:Key="bootstrapper" />
                 </ResourceDictionary>
+                <ResourceDictionary Source="pack://application:,,,/Panuon.UI;component/Themes/Control.xaml" />
+
                 <!-- MahApps.Metro resource dictionaries. Make sure that all file names are Case Sensitive! -->
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />
