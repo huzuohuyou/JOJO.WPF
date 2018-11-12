@@ -1,9 +1,11 @@
-﻿using Caliburn.Micro;
+﻿using Caliburn.Metro.Demo.ViewModels.Flyouts;
+using Caliburn.Micro;
 using JOJO.UC;
-using JOJO.UC.ViewModels;
+using JOJO.UserControls;
 using Panuon.UI;
 using Panuon.UIBrowser.ViewModels.Partial;
 using Sugar.WPF.Areas.System.Models;
+using Sugar.WPF.Areas.System.ViewModels;
 using Sugar.WPF.Utils;
 using System;
 using System.Collections.Generic;
@@ -21,25 +23,67 @@ namespace Sugar.WPF.ViewModels
     {
         List<PUTabItemModel> tablist = new List<PUTabItemModel>() ;
         static IndexViewModel indexvm = new IndexViewModel();
-        PUTabItemModel defaultTabItem = new PUTabItemModel() { Header = "系统首页", CanDelete = false,Content= indexvm };
         public MainWindowViewModel()
         {
             TreeViewItems = new ObservableCollection<PUTreeViewItemModel>();
             LoadTreeView();
-            //LoadTabControlsView(defaultTabItem);
-            ActivateItem(new TabControlsViewModel());
+            LoadTabControlsView(new List<IShell> { new IndexViewModel() {
+                
+            },new TreeViewsViewModel(),new Flyout1ViewModel() });
+            //ActivateItem(new TabControlsViewModel());
         }
 
-        public void LoadTabControlsView(PUTabItemModel model)
+        //public MainWindowViewModel(IEnumerable<IShell> tabs)
+        //{
+        //    TreeViewItems = new ObservableCollection<PUTreeViewItemModel>();
+        //    LoadTreeView();
+        //    Items.AddRange(tabs);
+        //}
+
+        public void LoadTabControlsView(IEnumerable<IShell> tabs)
         {
-            if (!tablist.Exists(r=>r.Header==model.Header))
-            {
-                tablist.Add(model);
-                TabItemList = new BindableCollection<PUTabItemModel>(tablist);
+            Items.AddRange(tabs);
+            //if (!tablist.Exists(r => r.Header == model.Header))
+            //{
+            //    tablist.Add(model);
+            //    TabItemList = new BindableCollection<PUTabItemModel>(tablist);
+            //}
+
+            //var d = new UserControlView();
+            //var temp = tabs.ToList()[0] as PUTabItemModel;
+            //var uc = new UserControlView();
+            //temp.Content = uc;
+            //var list = new List<PUTabItemModel>();
+            //list.Add(temp);
+
+            //list.Add(new PUTabItemModel()
+            //{
+            //    Header = "Test1",
+            //    Icon = "",
+            //    CanDelete = false,
+            //    Content = d,
+            //    Value = 1.1,
+
+                //});
+                //list.Add(new ButtonsViewModel()
+                //{
+                //    Header = "Test2",
+                //    Icon = "",
+                //    CanDelete = true,
+                //    Content = "TreeViewsViewModel",
+                //    Value = new PUTreeViewItemModel(),
+                //});
+                //list.Add(new PUTabItemModel()
+                //{
+                //    Header = "Test3",
+                //    Icon = "",
+                //    CanDelete = false,
+                //    Content = "3",
+                //    Value = 3.3,
+                //});
+                //TabItemList = new BindableCollection<PUTabItemModel>(list);
+
             }
-           
-            
-        }
 
         public BindableCollection<PUTabItemModel> TabItemList
         {

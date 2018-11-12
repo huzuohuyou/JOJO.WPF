@@ -89,15 +89,22 @@
     <Compile Include="Areas\System\Models\Default.cs" />
     <Compile Include="Areas\System\Models\Menus.cs" />
     <Compile Include="Areas\System\ViewModels\ButtonsViewModel.cs" />
+    <Compile Include="Areas\System\ViewModels\Flyout1ViewModel.cs" />
+    <Compile Include="Areas\System\ViewModels\IndexViewModel.cs" />
     <Compile Include="Areas\System\ViewModels\LeftBarViewModel.cs" />
     <Compile Include="Areas\System\ViewModels\TabControlsViewModel.cs" />
     <Compile Include="Areas\System\ViewModels\TreeViewsViewModel.cs" />
+    <Compile Include="Areas\System\ViewModels\UserControlViewModel.cs" />
     <Compile Include="Utils\Ajax.cs" />
     <Compile Include="Utils\HttpHelper.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
     <Compile Include="Views\Account\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
+    <Page Include="Areas\System\Views\Flyout1View.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Areas\System\Views\IndexView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -114,6 +121,10 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Areas\System\Views\UserControlView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Views\Account\Login.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

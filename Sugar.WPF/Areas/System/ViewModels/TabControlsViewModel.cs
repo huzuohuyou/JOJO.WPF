@@ -11,7 +11,7 @@ namespace Panuon.UIBrowser.ViewModels.Partial
 
         public TabControlsViewModel()
         {
-            var d = new UserControlDemo();
+            var d = new UserControlView();
             var list = new List<PUTabItemModel>();
             list.Add(new PUTabItemModel()
             {
