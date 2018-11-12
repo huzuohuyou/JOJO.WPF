@@ -1,6 +1,7 @@
 ﻿using Caliburn.Metro.Demo.ViewModels.Flyouts;
 using Caliburn.Micro;
 using JOJO.UC;
+using JOJO.ViewModels;
 using MahApps.Metro.Controls;
 using Panuon.UI;
 using Panuon.UIBrowser.ViewModels.Partial;
@@ -39,9 +40,7 @@ namespace Sugar.WPF.ViewModels
         }
         public void LoadTabControlsView(IEnumerable<IShell> tabs)
         {
-           
             Items.AddRange(tabs);
-           
         }
 
         public BindableCollection<PUTabItemModel> TabItemList
@@ -83,8 +82,6 @@ namespace Sugar.WPF.ViewModels
                 //命名空间.类型名
                 string fullName = nameSpace + "." + className;
                 //加载程序集，创建程序集里面的 命名空间.类型名 实例
-                
-
                 object ect = Assembly.LoadFrom($@"{Environment.CurrentDirectory}\JOJO.ViewModels.dll").CreateInstance(fullName);
                 //类型转换并返回
                 return (T)ect;
@@ -99,14 +96,25 @@ namespace Sugar.WPF.ViewModels
 
         public void ChangeSelect(string select)
         {
-            var model = CreateInstance<IShell>("Panuon.UIBrowser.ViewModels.Partial", "IndexViewModel", null);
-            ActivateItem(model);
+            var model = CreateInstance<IShell>("JOJO.ViewModels", $"{select}ViewModel", null);
+            var isNewTab = true;
+            Items.ToList().ForEach(r=> {
+                if (r.GetType()==model.GetType())
+                {
+                    isNewTab = false;
+                    ActivateItem(r);
+                }
+            });
+            if (isNewTab)
+            {
+                ActivateItem(model);
+            }
+            
         }
         public void ChoosedItemChanged(RoutedPropertyChangedEventArgs<PUTreeViewItem> e)
         {
-            
             var choosedItem = e.NewValue;
-            ChangeSelect(choosedItem.Value.ToString().Split('/')[1]);
+            ChangeSelect(choosedItem.Value.ToString().Split('/')[2]);
             if (choosedItem != null)
                 ChoosedHeader = choosedItem.Header;
         }

@@ -2,7 +2,7 @@
 using JOJO.UC;
 using System;
 
-namespace Panuon.UIBrowser.ViewModels.Partial
+namespace JOJO.ViewModels
 {
     public class IndexViewModel : Screen, IShell
     {
