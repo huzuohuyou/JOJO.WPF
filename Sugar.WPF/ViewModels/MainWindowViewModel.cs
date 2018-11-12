@@ -1,11 +1,10 @@
 ﻿using Caliburn.Metro.Demo.ViewModels.Flyouts;
 using Caliburn.Micro;
 using JOJO.UC;
-using JOJO.UserControls;
+using MahApps.Metro.Controls;
 using Panuon.UI;
 using Panuon.UIBrowser.ViewModels.Partial;
 using Sugar.WPF.Areas.System.Models;
-using Sugar.WPF.Areas.System.ViewModels;
 using Sugar.WPF.Utils;
 using System;
 using System.Collections.Generic;
@@ -22,7 +21,6 @@ namespace Sugar.WPF.ViewModels
     public class MainWindowViewModel : Conductor<IShell>.Collection.OneActive, IShell
     {
         List<PUTabItemModel> tablist = new List<PUTabItemModel>() ;
-        static IndexViewModel indexvm = new IndexViewModel();
         public MainWindowViewModel()
         {
             TreeViewItems = new ObservableCollection<PUTreeViewItemModel>();
@@ -30,60 +28,21 @@ namespace Sugar.WPF.ViewModels
             LoadTabControlsView(new List<IShell> { new IndexViewModel() {
                 
             },new TreeViewsViewModel(),new Flyout1ViewModel() });
-            //ActivateItem(new TabControlsViewModel());
         }
 
-        //public MainWindowViewModel(IEnumerable<IShell> tabs)
-        //{
-        //    TreeViewItems = new ObservableCollection<PUTreeViewItemModel>();
-        //    LoadTreeView();
-        //    Items.AddRange(tabs);
-        //}
+        
 
+        private void MetroTabControl_TabItemClosingEvent(object sender, BaseMetroTabControl.TabItemClosingEventArgs e)
+        {
+            if (e.ClosingTabItem.Header.ToString().StartsWith("sizes"))
+                e.Cancel = true;
+        }
         public void LoadTabControlsView(IEnumerable<IShell> tabs)
         {
+           
             Items.AddRange(tabs);
-            //if (!tablist.Exists(r => r.Header == model.Header))
-            //{
-            //    tablist.Add(model);
-            //    TabItemList = new BindableCollection<PUTabItemModel>(tablist);
-            //}
-
-            //var d = new UserControlView();
-            //var temp = tabs.ToList()[0] as PUTabItemModel;
-            //var uc = new UserControlView();
-            //temp.Content = uc;
-            //var list = new List<PUTabItemModel>();
-            //list.Add(temp);
-
-            //list.Add(new PUTabItemModel()
-            //{
-            //    Header = "Test1",
-            //    Icon = "",
-            //    CanDelete = false,
-            //    Content = d,
-            //    Value = 1.1,
-
-                //});
-                //list.Add(new ButtonsViewModel()
-                //{
-                //    Header = "Test2",
-                //    Icon = "",
-                //    CanDelete = true,
-                //    Content = "TreeViewsViewModel",
-                //    Value = new PUTreeViewItemModel(),
-                //});
-                //list.Add(new PUTabItemModel()
-                //{
-                //    Header = "Test3",
-                //    Icon = "",
-                //    CanDelete = false,
-                //    Content = "3",
-                //    Value = 3.3,
-                //});
-                //TabItemList = new BindableCollection<PUTabItemModel>(list);
-
-            }
+           
+        }
 
         public BindableCollection<PUTabItemModel> TabItemList
         {
@@ -126,7 +85,7 @@ namespace Sugar.WPF.ViewModels
                 //加载程序集，创建程序集里面的 命名空间.类型名 实例
                 
 
-                object ect = Assembly.LoadFrom($@"{Environment.CurrentDirectory}\JOJO.UC.dll").CreateInstance(fullName);
+                object ect = Assembly.LoadFrom($@"{Environment.CurrentDirectory}\JOJO.ViewModels.dll").CreateInstance(fullName);
                 //类型转换并返回
                 return (T)ect;
             }
@@ -140,8 +99,7 @@ namespace Sugar.WPF.ViewModels
 
         public void ChangeSelect(string select)
         {
-            var model = CreateInstance<IShell>("JOJO.UC.ViewModels", "IndexViewModel", null);
-            //var model= CreateInstance<IShell>("Panuon.UIBrowser.ViewModels.Partial", "TreeViewsViewModel", null);
+            var model = CreateInstance<IShell>("Panuon.UIBrowser.ViewModels.Partial", "IndexViewModel", null);
             ActivateItem(model);
         }
         public void ChoosedItemChanged(RoutedPropertyChangedEventArgs<PUTreeViewItem> e)

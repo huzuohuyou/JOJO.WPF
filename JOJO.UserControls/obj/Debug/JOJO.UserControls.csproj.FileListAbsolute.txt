@@ -3,11 +3,7 @@ D:\GitHub\JOJO.WPF\JOJO.UserControls\bin\Debug\JOJO.UserControls.pdb
 D:\GitHub\JOJO.WPF\JOJO.UserControls\bin\Debug\Caliburn.Micro.dll
 D:\GitHub\JOJO.WPF\JOJO.UserControls\bin\Debug\Caliburn.Micro.Platform.Core.dll
 D:\GitHub\JOJO.WPF\JOJO.UserControls\bin\Debug\Caliburn.Micro.Platform.dll
-D:\GitHub\JOJO.WPF\JOJO.UserControls\bin\Debug\Panuon.UI.Charts.dll
-D:\GitHub\JOJO.WPF\JOJO.UserControls\bin\Debug\Panuon.UI.dll
 D:\GitHub\JOJO.WPF\JOJO.UserControls\bin\Debug\System.Windows.Interactivity.dll
-D:\GitHub\JOJO.WPF\JOJO.UserControls\bin\Debug\Panuon.UI.Charts.pdb
-D:\GitHub\JOJO.WPF\JOJO.UserControls\bin\Debug\Panuon.UI.pdb
 D:\GitHub\JOJO.WPF\JOJO.UserControls\bin\Debug\Caliburn.Micro.xml
 D:\GitHub\JOJO.WPF\JOJO.UserControls\bin\Debug\Caliburn.Micro.Platform.xml
 D:\GitHub\JOJO.WPF\JOJO.UserControls\bin\Debug\Caliburn.Micro.Platform.Core.xml

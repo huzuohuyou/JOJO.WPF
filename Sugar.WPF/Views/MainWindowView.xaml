@@ -4,7 +4,10 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:MetroMain="clr-namespace:Sugar.WPF.ViewModels"
+        d:DataContext="{d:DesignInstance MetroMain:MainWindowViewModel}"
         xmlns:local="clr-namespace:Sugar.WPF"
+        
         xmlns:pu="clr-namespace:Panuon.UI;assembly=Panuon.UI"
         xmlns:cm="http://www.caliburnproject.org"
         mc:Ignorable="d"
@@ -32,8 +35,18 @@
 
         </DockPanel>
         <DockPanel Grid.Column="1" LastChildFill="True" Grid.Row="1" >
-            
-            <pu:PUTabControl Name="Items"  BindingItems="{Binding TabItemList,Mode=TwoWay}" Height="620"   Background="{x:Null}" Margin="0"/>
+            <controls:MetroTabControl x:Name="Items"  Height="620"   Background="{x:Null}" Margin="0"
+                                              controls:TabControlHelper.Underlined="TabPanel"
+                                              TabStripPlacement="Top">
+              
+                <!--<controls:MetroTabItem CloseButtonMargin="0,9,0,0" controls:ControlsHelper.HeaderFontSize="18"
+                                               CloseButtonEnabled="True"
+                                               Header="item _5">
+                    <TextBlock FontSize="30" Text="Content!" />
+                </controls:MetroTabItem>-->
+               
+            </controls:MetroTabControl>
+            <!--<pu:PUTabControl Name="Items"  BindingItems="{Binding TabItemList,Mode=TwoWay}" Height="620"   Background="{x:Null}" Margin="0"/>-->
            
         </DockPanel>
 

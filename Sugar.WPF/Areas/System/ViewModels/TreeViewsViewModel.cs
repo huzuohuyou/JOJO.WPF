@@ -13,10 +13,12 @@ namespace Panuon.UIBrowser.ViewModels.Partial
 {
     public class TreeViewsViewModel : Screen, IShell
     {
+       
         public TreeViewsViewModel()
         {
             TreeViewItems = new ObservableCollection<PUTreeViewItemModel>();
             LoadTreeView();
+            DisplayName = "ITEM2";
         }
 
         #region Binding

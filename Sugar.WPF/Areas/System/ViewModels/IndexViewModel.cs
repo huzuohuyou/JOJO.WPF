@@ -13,7 +13,7 @@ namespace Panuon.UIBrowser.ViewModels.Partial
     {
         public IndexViewModel()
         {
-            DisplayName = "CH Remote";
+            DisplayName = "首页";
         }
 
         public override void CanClose(Action<bool> callback)

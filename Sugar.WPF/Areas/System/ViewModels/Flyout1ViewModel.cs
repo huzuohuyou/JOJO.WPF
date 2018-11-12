@@ -8,8 +8,7 @@ namespace Caliburn.Metro.Demo.ViewModels.Flyouts
     {
         public Flyout1ViewModel()
         {
-            //this.Header = "settings";
-            //this.Position = Position.Right;
+            DisplayName = "ITEM2";
         }
     }
 }
