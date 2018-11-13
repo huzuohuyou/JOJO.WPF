@@ -94,12 +94,11 @@
     <Compile Include="Areas\System\ViewModels\TabControlsViewModel.cs" />
     <Compile Include="Areas\System\ViewModels\TreeViewsViewModel.cs" />
     <Compile Include="Areas\System\ViewModels\UserControlViewModel.cs" />
+    <Compile Include="CustomWindowManager.cs" />
     <Compile Include="Utils\Ajax.cs" />
     <Compile Include="Utils\HttpHelper.cs" />
+    <Compile Include="ViewModels\Account\LoginViewModel.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
-    <Compile Include="Views\Account\Login.xaml.cs">
-      <DependentUpon>Login.xaml</DependentUpon>
-    </Compile>
     <Page Include="Areas\System\Views\Flyout1View.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -124,7 +123,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Views\Account\Login.xaml">
+    <Page Include="Views\Account\LoginView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

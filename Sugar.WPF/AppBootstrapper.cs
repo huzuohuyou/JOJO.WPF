@@ -9,6 +9,7 @@ using System.ComponentModel.Composition.Primitives;
 using System.Windows;
 using Panuon.UI;
 using JOJO.UC;
+using Sugar.WPF.ViewModels.Account;
 
 namespace Sugar.WPF
 {
@@ -20,14 +21,12 @@ namespace Sugar.WPF
         {
             Initialize();
         }
-
         protected override void Configure()
         {
             container = new CompositionContainer(new AggregateCatalog(
                     AssemblySource.Instance.Select(x => new AssemblyCatalog(x)).OfType<ComposablePartCatalog>()));
 
             var batch = new CompositionBatch();
-
             batch.AddExportedValue<IWindowManager>(new WindowManager());
             batch.AddExportedValue<IEventAggregator>(new EventAggregator());
             batch.AddExportedValue(container);
@@ -64,7 +63,23 @@ namespace Sugar.WPF
 
         protected override void OnStartup(object sender, StartupEventArgs e)
         {
-            DisplayRootViewFor<IShell>();
+            Application.Current.ShutdownMode = ShutdownMode.OnExplicitShutdown;
+            var viewModel = IoC.Get<LoginViewModel>();
+            IWindowManager windowManager;
+            try
+            {
+                windowManager = IoC.Get<IWindowManager>();
+            }
+            catch
+            {
+                windowManager = new WindowManager();
+            }
+            var ok = windowManager.ShowDialog(viewModel);
+            if (ok.HasValue && ok.Value)
+            {
+                Application.Current.ShutdownMode = ShutdownMode.OnMainWindowClose;
+                DisplayRootViewFor<IShell>();
+            }
         }
     }
 }

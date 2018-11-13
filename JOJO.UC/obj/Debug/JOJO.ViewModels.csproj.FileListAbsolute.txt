@@ -9,5 +9,6 @@ D:\GitHub\JOJO.WPF\JOJO.UC\bin\Debug\Caliburn.Micro.xml
 D:\GitHub\JOJO.WPF\JOJO.UC\bin\Debug\Caliburn.Micro.Platform.xml
 D:\GitHub\JOJO.WPF\JOJO.UC\bin\Debug\Caliburn.Micro.Platform.Core.xml
 D:\GitHub\JOJO.WPF\JOJO.UC\bin\Debug\Newtonsoft.Json.xml
+D:\GitHub\JOJO.WPF\JOJO.UC\obj\Debug\JOJO.ViewModels.csprojResolveAssemblyReference.cache
 D:\GitHub\JOJO.WPF\JOJO.UC\obj\Debug\JOJO.ViewModels.dll
 D:\GitHub\JOJO.WPF\JOJO.UC\obj\Debug\JOJO.ViewModels.pdb

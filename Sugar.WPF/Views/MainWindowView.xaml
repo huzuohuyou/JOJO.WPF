@@ -12,6 +12,7 @@
         xmlns:cm="http://www.caliburnproject.org"
         mc:Ignorable="d"
         Title="MainWindow" Height="455.714" Width="826.429" WindowState="Maximized" >
+    
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="69"/>

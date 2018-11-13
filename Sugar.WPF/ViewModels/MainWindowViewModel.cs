@@ -7,6 +7,7 @@ using Panuon.UI;
 using Panuon.UIBrowser.ViewModels.Partial;
 using Sugar.WPF.Areas.System.Models;
 using Sugar.WPF.Utils;
+using Sugar.WPF.ViewModels.Account;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -18,9 +19,10 @@ using System.Windows;
 namespace Sugar.WPF.ViewModels
 {
     [Export(typeof(IShell))]
-
+    [Export(typeof(MainWindowViewModel))]
     public class MainWindowViewModel : Conductor<IShell>.Collection.OneActive, IShell
     {
+        
         List<PUTabItemModel> tablist = new List<PUTabItemModel>() ;
         public MainWindowViewModel()
         {
@@ -31,7 +33,28 @@ namespace Sugar.WPF.ViewModels
             },new TreeViewsViewModel(),new Flyout1ViewModel() });
         }
 
-        
+        private readonly IWindowManager _windowManager;
+
+        [ImportingConstructor]
+        public MainWindowViewModel(IWindowManager windowManager)
+        {
+            try
+            {
+                _windowManager = windowManager;
+                TreeViewItems = new ObservableCollection<PUTreeViewItemModel>();
+                LoadTreeView();
+                LoadTabControlsView(new List<IShell> {
+                        new IndexViewModel() { },
+                        new TreeViewsViewModel(),
+                        new Flyout1ViewModel() });
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+
 
         private void MetroTabControl_TabItemClosingEvent(object sender, BaseMetroTabControl.TabItemClosingEventArgs e)
         {
@@ -96,19 +119,28 @@ namespace Sugar.WPF.ViewModels
 
         public void ChangeSelect(string select)
         {
-            var model = CreateInstance<IShell>("JOJO.ViewModels", $"{select}ViewModel", null);
-            var isNewTab = true;
-            Items.ToList().ForEach(r=> {
-                if (r.GetType()==model.GetType())
-                {
-                    isNewTab = false;
-                    ActivateItem(r);
-                }
-            });
-            if (isNewTab)
+            try
             {
-                ActivateItem(model);
+                var model = CreateInstance<IShell>("JOJO.ViewModels", $"{select}ViewModel", null);
+                var isNewTab = true;
+                Items.ToList().ForEach(r => {
+                    if (r.GetType() == model.GetType())
+                    {
+                        isNewTab = false;
+                        ActivateItem(r);
+                    }
+                });
+                if (isNewTab)
+                {
+                    ActivateItem(model);
+                }
             }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            
             
         }
         public void ChoosedItemChanged(RoutedPropertyChangedEventArgs<PUTreeViewItem> e)
