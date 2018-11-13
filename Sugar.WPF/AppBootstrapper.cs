@@ -63,23 +63,23 @@ namespace Sugar.WPF
 
         protected override void OnStartup(object sender, StartupEventArgs e)
         {
-            Application.Current.ShutdownMode = ShutdownMode.OnExplicitShutdown;
-            var viewModel = IoC.Get<LoginViewModel>();
-            IWindowManager windowManager;
-            try
-            {
-                windowManager = IoC.Get<IWindowManager>();
-            }
-            catch
-            {
-                windowManager = new WindowManager();
-            }
-            var ok = windowManager.ShowDialog(viewModel);
-            if (ok.HasValue && ok.Value)
-            {
-                Application.Current.ShutdownMode = ShutdownMode.OnMainWindowClose;
+            //Application.Current.ShutdownMode = ShutdownMode.OnExplicitShutdown;
+            //var viewModel = IoC.Get<LoginViewModel>();
+            //IWindowManager windowManager;
+            //try
+            //{
+            //    windowManager = IoC.Get<IWindowManager>();
+            //}
+            //catch
+            //{
+            //    windowManager = new WindowManager();
+            //}
+            //var ok = windowManager.ShowDialog(viewModel);
+            //if (ok.HasValue && ok.Value)
+            //{
+            //    Application.Current.ShutdownMode = ShutdownMode.OnMainWindowClose;
                 DisplayRootViewFor<IShell>();
-            }
+            //}
         }
     }
 }

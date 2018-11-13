@@ -7,7 +7,6 @@ D:\GitHub\JOJO.WPF\JOJO.UserControls\bin\Debug\System.Windows.Interactivity.dll
 D:\GitHub\JOJO.WPF\JOJO.UserControls\bin\Debug\Caliburn.Micro.xml
 D:\GitHub\JOJO.WPF\JOJO.UserControls\bin\Debug\Caliburn.Micro.Platform.xml
 D:\GitHub\JOJO.WPF\JOJO.UserControls\bin\Debug\Caliburn.Micro.Platform.Core.xml
-D:\GitHub\JOJO.WPF\JOJO.UserControls\obj\Debug\JOJO.UserControls.csprojResolveAssemblyReference.cache
 D:\GitHub\JOJO.WPF\JOJO.UserControls\obj\Debug\JOJO.UserControls.g.resources
 D:\GitHub\JOJO.WPF\JOJO.UserControls\obj\Debug\JOJO.UserControls.dll
 D:\GitHub\JOJO.WPF\JOJO.UserControls\obj\Debug\JOJO.UserControls.pdb

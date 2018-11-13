@@ -1,5 +1,6 @@
 ﻿using Caliburn.Metro.Demo.ViewModels.Flyouts;
 using Caliburn.Micro;
+using Elight.Infrastructure;
 using JOJO.UC;
 using JOJO.ViewModels;
 using MahApps.Metro.Controls;
@@ -24,34 +25,29 @@ namespace Sugar.WPF.ViewModels
     {
         
         List<PUTabItemModel> tablist = new List<PUTabItemModel>() ;
-        public MainWindowViewModel()
-        {
-            TreeViewItems = new ObservableCollection<PUTreeViewItemModel>();
-            LoadTreeView();
-            LoadTabControlsView(new List<IShell> { new IndexViewModel() {
-                
-            },new TreeViewsViewModel(),new Flyout1ViewModel() });
-        }
-
         private readonly IWindowManager _windowManager;
 
         [ImportingConstructor]
         public MainWindowViewModel(IWindowManager windowManager)
         {
-            try
+            _windowManager = windowManager;
+            Application.Current.ShutdownMode = ShutdownMode.OnExplicitShutdown;
+            var viewModel = IoC.Get<LoginViewModel>();
+           
+            var ok = windowManager.ShowDialog(viewModel);
+            if (ok.HasValue && ok.Value)
             {
-                _windowManager = windowManager;
+                Application.Current.ShutdownMode = ShutdownMode.OnMainWindowClose;
                 TreeViewItems = new ObservableCollection<PUTreeViewItemModel>();
-                LoadTreeView();
+                LoadTreeView(viewModel.Login());
                 LoadTabControlsView(new List<IShell> {
                         new IndexViewModel() { },
                         new TreeViewsViewModel(),
                         new Flyout1ViewModel() });
             }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
+
+
+           
         }
 
 
@@ -153,11 +149,11 @@ namespace Sugar.WPF.ViewModels
         #endregion
 
         #region Function
-        public void LoadTreeView()
+        public void LoadTreeView(Operator ope)
         {
-            var response = new Ajax<List<Menus>, Default>()
+            var response = new Ajax<List<Menus>, Operator>(ope)
             {
-                url = @"http://localhost:17924/Home/GetLeftMenu",
+                url = @"http://localhost:17924/Home/GetLeftMenu2",
             }.Post();
             
             response.ForEach(r =>

@@ -87,7 +87,9 @@
     </ApplicationDefinition>
     <Compile Include="AppBootstrapper.cs" />
     <Compile Include="Areas\System\Models\Default.cs" />
+    <Compile Include="Areas\System\Models\LoginModel.cs" />
     <Compile Include="Areas\System\Models\Menus.cs" />
+    <Compile Include="Areas\System\Models\ResponseModel.cs" />
     <Compile Include="Areas\System\ViewModels\ButtonsViewModel.cs" />
     <Compile Include="Areas\System\ViewModels\Flyout1ViewModel.cs" />
     <Compile Include="Areas\System\ViewModels\LeftBarViewModel.cs" />
@@ -97,6 +99,8 @@
     <Compile Include="CustomWindowManager.cs" />
     <Compile Include="Utils\Ajax.cs" />
     <Compile Include="Utils\HttpHelper.cs" />
+    <Compile Include="Utils\PasswordBoxBindingHelper.cs" />
+    <Compile Include="Utils\PasswordHelper.cs" />
     <Compile Include="ViewModels\Account\LoginViewModel.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
     <Page Include="Areas\System\Views\Flyout1View.xaml">
@@ -186,6 +190,10 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\elight.mvc\project\Elight.Infrastructure\Elight.Infrastructure.csproj">
+      <Project>{f0e21eaa-5032-4e90-a0be-411c67c8ce82}</Project>
+      <Name>Elight.Infrastructure</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\PanuonUI\Panuon.UI\Panuon.UI.csproj">
       <Project>{72b3698e-1784-4101-99ae-fc7b8f48e96d}</Project>
       <Name>Panuon.UI</Name>

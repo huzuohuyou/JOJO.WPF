@@ -9,13 +9,21 @@ using System.Threading.Tasks;
 namespace Sugar.WPF.Utils
 {
     public delegate void SuccessDelegate(string jsondata);
-    public class Ajax<T,D> where T : class, new()
+    public class Ajax<T, D> where T : class, new()
     {
         public string type { get; set; }
         public string url { get; set; }
         public string dataType { get; set; }
         public D data { get; set; }
-        
+
+
+        public Ajax(){ }
+
+        public Ajax(D d)
+        {
+            data = d;
+        }
+
         public SuccessDelegate success { get; set; }
 
         public T Post()
@@ -26,6 +34,7 @@ namespace Sugar.WPF.Utils
             httpContent.Headers.ContentType.CharSet = "utf-8";
             using (HttpClient httpClient = new HttpClient())
             {
+          
                 HttpResponseMessage response = httpClient.PostAsync(url ,httpContent).Result;
 
                 if (response.IsSuccessStatusCode)

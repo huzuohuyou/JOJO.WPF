@@ -7,6 +7,8 @@
         xmlns:controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:pu="clr-namespace:Panuon.UI;assembly=Panuon.UI"
         xmlns:cm="http://www.caliburnproject.org"
+        xmlns:w="clr-namespace:Sugar.WPF.Utils"   
+        
         mc:Ignorable="d"
         Title="MainWindow" Height="566" Width="966" Icon="/Sugar.WPF;component/Content/Images/icon.png" WindowStartupLocation="CenterScreen">
     <Grid>
@@ -15,38 +17,37 @@
                 <ColumnDefinition/>
                 <ColumnDefinition Width="336"/>
             </Grid.ColumnDefinitions>
-            <Grid Grid.Column="1" Margin="56,180,61,0" Height="164" VerticalAlignment="Top">
-                <pu:PUPasswordBox MaxLength="16"
+            <Grid Grid.Column="1" Margin="59,113,58,199">
+                <PasswordBox Margin="0,101,0,0"
+                    controls:TextBoxHelper.Watermark="请输入密   码"
                     Name="PassWord"
-                    Icon="P"
-                    PasswordBoxStyle="IconGroup"
-                    Watermark="密码"
-                    Width="219"
-                    Height="30"
-                    HorizontalAlignment="Left"
                     Foreground="#FF49A9C0"
                     BorderBrush="#FF49A9C0"
-                    ShadowColor="#FF49A9C0"
-                    BorderCornerRadius="3" Margin="0,87,0,47"/>
+                    w:PasswordHelper.Attach="True"
+                    w:PasswordHelper.Password="{
+                    Binding Path=PassWord,Mode=TwoWay,
+                    UpdateSourceTrigger=PropertyChanged}" 
+                    Height="27" 
+                    VerticalAlignment="Top"  />
+
+
                 <pu:PUButton Content="立即登录"  
-                    Name="Login"
+                    x:Name="Login"
                     Width="219"
                     Height="30"
                     HorizontalAlignment="Left"
                     Background="#FF0099CC"
-                    BorderCornerRadius="3" Margin="0,134,0,0"/>
-                <pu:PUTextBox
+                    BorderCornerRadius="3" Margin="0,164,0,0" VerticalAlignment="Top"/>
+
+                <TextBox Margin="0,53,0,0"
+                    controls:TextBoxHelper.Watermark="请输入用户名"
                     Name="UserName"
-                    Icon="U"
-                    Watermark="用户名"
-                    Width="219"
-                    Height="30"
-                    HorizontalAlignment="Left"
                     Foreground="#FF49A9C0"
                     BorderBrush="#FF49A9C0"
-                    ShadowColor="#FF49A9C0"
-                    BorderCornerRadius="3" TextBoxStyle="IconGroup" Margin="0,41,0,93"/>
-                <Label x:Name="label" Content="登录" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Width="97" FontSize="25" FontFamily="Microsoft JhengHei UI" Margin="62,0,60,123"/>
+                    Height="27" 
+                    VerticalAlignment="Top"  />
+
+                <Label x:Name="label" Content="登录" HorizontalContentAlignment="Center" FontSize="25" FontFamily="Microsoft JhengHei UI" Margin="62,0,60,0" Height="39" VerticalAlignment="Top" Background="{x:Null}" Foreground="#FF49A9C0"/>
             </Grid>
             <Image x:Name="image" HorizontalAlignment="Left" Margin="142,59,0,0" VerticalAlignment="Top" Height="0" Width="0"/>
             <DockPanel LastChildFill="False">
