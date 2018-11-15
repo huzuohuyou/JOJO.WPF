@@ -10,3 +10,4 @@ D:\GitHub\JOJO.WPF\JOJO.UserControls\bin\Debug\Caliburn.Micro.Platform.Core.xml
 D:\GitHub\JOJO.WPF\JOJO.UserControls\obj\Debug\JOJO.UserControls.g.resources
 D:\GitHub\JOJO.WPF\JOJO.UserControls\obj\Debug\JOJO.UserControls.dll
 D:\GitHub\JOJO.WPF\JOJO.UserControls\obj\Debug\JOJO.UserControls.pdb
+D:\GitHub\JOJO.WPF\JOJO.UserControls\obj\Debug\JOJO.UserControls.csprojResolveAssemblyReference.cache

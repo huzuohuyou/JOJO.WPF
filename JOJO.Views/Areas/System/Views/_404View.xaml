@@ -1,0 +1,13 @@
+﻿<UserControl x:Class="JOJO.ViewModels._404View"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:cal="http://www.caliburnproject.org"
+             xmlns:pu="clr-namespace:Panuon.UI;assembly=Panuon.UI"
+             mc:Ignorable="d" Width="Auto" d:DesignWidth="1026.405" Background="White" d:DesignHeight="742.722" >
+    <Grid Margin="10">
+        <Label x:Name="label" Content="404" Margin="448,268,485,0" VerticalAlignment="Top" FontSize="36" RenderTransformOrigin="-0.329,0.429"/>
+    </Grid>
+    <!---从http://www.fontawesome.com.cn/cheatsheet/上复制图标-->
+</UserControl>
