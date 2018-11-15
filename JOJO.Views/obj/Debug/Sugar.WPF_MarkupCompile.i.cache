@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\GitHub\JOJO.WPF\JOJO.Views\App.xaml
-8-762366405
+8-1304831900
 1903853140
-26-252326765
+27-301033149
 76-279473298
-Areas\System\Views\Flyout1View.xaml;Areas\System\Views\_404View.xaml;Areas\System\Views\IndexView.xaml;Areas\System\Views\TabControlsView.xaml;Areas\System\Views\TreeViewsView.xaml;Areas\System\Views\UserControlView.xaml;Views\Account\LoginView.xaml;Views\MainWindowView.xaml;
+Areas\System\Views\UserView.xaml;Areas\System\Views\_404View.xaml;Areas\System\Views\IndexView.xaml;Areas\System\Views\TabControlsView.xaml;Areas\System\Views\TreeViewsView.xaml;Areas\System\Views\UserControlView.xaml;Views\Account\LoginView.xaml;Views\MainWindowView.xaml;
 
-True
+False
 

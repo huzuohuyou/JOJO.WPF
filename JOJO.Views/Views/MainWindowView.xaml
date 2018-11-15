@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:Dialog="clr-namespace:MahApps.Metro.Controls.Dialogs;assembly=MahApps.Metro"
         xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
         xmlns:MetroMain="clr-namespace:Sugar.WPF.ViewModels"
         d:DataContext="{d:DesignInstance MetroMain:MainWindowViewModel}"
@@ -13,10 +14,10 @@
         xmlns:cm="http://www.caliburnproject.org"
         mc:Ignorable="d"
         Title="MainWindow" Height="455.714" Width="826.429" WindowState="Maximized" >
-    
+
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="69"/>
+            <RowDefinition Height="44"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
@@ -24,9 +25,12 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <DockPanel LastChildFill="False" Margin="0" Grid.ColumnSpan="2" Background="#FF009FD9">
-            
+            <Button Width="56"
+                        Margin="4,7"
+                        Name="LogOut"
+                    Content="{Binding UserName}" DockPanel.Dock="Right" BorderBrush="#FF2EBDF1" Background="#FF009FD9" Foreground="#FF2E0F80"/>
         </DockPanel>
-            <DockPanel LastChildFill="False" Grid.Row="1" Background="#FF3A3E4A">
+        <DockPanel LastChildFill="False" Grid.Row="1" Background="#FF3A3E4A">
             <ScrollViewer
                                           Width="200"
                                           VerticalScrollBarVisibility="Auto"
@@ -42,16 +46,16 @@
             <controls:MetroTabControl x:Name="Items"  Height="620"   Background="{x:Null}" Margin="0"
                                               controls:TabControlHelper.Underlined="TabPanel"
                                               TabStripPlacement="Top">
-              
+
                 <!--<controls:MetroTabItem CloseButtonMargin="0,9,0,0" controls:ControlsHelper.HeaderFontSize="18"
                                                CloseButtonEnabled="True"
                                                Header="item _5">
                     <TextBlock FontSize="30" Text="Content!" />
                 </controls:MetroTabItem>-->
-               
+
             </controls:MetroTabControl>
             <!--<pu:PUTabControl Name="Items"  BindingItems="{Binding TabItemList,Mode=TwoWay}" Height="620"   Background="{x:Null}" Margin="0"/>-->
-           
+
         </DockPanel>
 
     </Grid>

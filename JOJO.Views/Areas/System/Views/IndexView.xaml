@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:cal="http://www.caliburnproject.org"
              xmlns:pu="clr-namespace:Panuon.UI;assembly=Panuon.UI"
-             mc:Ignorable="d" Width="Auto" d:DesignWidth="434" >
+             mc:Ignorable="d" Width="Auto" d:DesignWidth="294" d:DesignHeight="203" Background="White" >
     <!---从http://www.fontawesome.com.cn/cheatsheet/上复制图标-->
     <Label x:Name="label" Content="Label" HorizontalAlignment="Left" Margin="177,0,0,0"/>
 </UserControl>

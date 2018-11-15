@@ -1,0 +1,11 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:cal="http://www.caliburnproject.org"
+             xmlns:pu="clr-namespace:Panuon.UI;assembly=Panuon.UI"
+             xmlns:UserControls="clr-namespace:JOJO.UserControls" x:Class="JOJO.ViewModels.UserView"
+             mc:Ignorable="d" Width="Auto" d:DesignWidth="294" d:DesignHeight="203" Background="White" >
+    <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="20,38,0,0" VerticalAlignment="Top" Width="75"/>
+</UserControl>

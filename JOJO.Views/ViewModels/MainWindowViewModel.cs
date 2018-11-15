@@ -1,5 +1,4 @@
-﻿using Caliburn.Metro.Demo.ViewModels.Flyouts;
-using Caliburn.Micro;
+﻿using Caliburn.Micro;
 using Elight.Infrastructure;
 using JOJO.UC;
 using JOJO.ViewModels;
@@ -23,7 +22,7 @@ namespace Sugar.WPF.ViewModels
     [Export(typeof(MainWindowViewModel))]
     public class MainWindowViewModel : Conductor<IShell>.Collection.OneActive, IShell
     {
-        
+        public string UserName{ get { return "退出"; } }
         List<PUTabItemModel> tablist = new List<PUTabItemModel>() ;
         private readonly IWindowManager _windowManager;
 
@@ -33,8 +32,7 @@ namespace Sugar.WPF.ViewModels
             _windowManager = windowManager;
             Application.Current.ShutdownMode = ShutdownMode.OnExplicitShutdown;
             var viewModel = IoC.Get<LoginViewModel>();
-           
-            var ok = windowManager.ShowDialog(viewModel);
+            var ok = _windowManager.ShowDialog(viewModel);
             if (ok.HasValue && ok.Value)
             {
                 Application.Current.ShutdownMode = ShutdownMode.OnMainWindowClose;
@@ -43,14 +41,15 @@ namespace Sugar.WPF.ViewModels
                 LoadTabControlsView(new List<IShell> {
                         new IndexViewModel() { },
                         new TreeViewsViewModel(),
-                        new Flyout1ViewModel() });
+                         });
             }
-
-
-           
+            return;
         }
 
-
+        public void LogOut()
+        {
+            Application.Current.Shutdown();
+        }
 
         private void MetroTabControl_TabItemClosingEvent(object sender, BaseMetroTabControl.TabItemClosingEventArgs e)
         {
@@ -133,7 +132,6 @@ namespace Sugar.WPF.ViewModels
             }
             catch (Exception)
             {
-
                 throw;
             }
             
@@ -153,7 +151,7 @@ namespace Sugar.WPF.ViewModels
         {
             var response = new Ajax<List<Menus>, Operator>(ope)
             {
-                url = @"http://localhost:17924/Home/GetLeftMenu2",
+                url = @"http://192.168.2.11:8095//Home/GetLeftMenu2",
             }.Post();
             
             response.ForEach(r =>

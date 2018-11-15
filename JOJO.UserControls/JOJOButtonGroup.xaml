@@ -1,0 +1,16 @@
+﻿<UserControl x:Class="JOJO.UserControls.JOJOButtonGroup"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:JOJO.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="44.081" d:DesignWidth="331.836">
+    <Grid Background="White">
+        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="button1" Content="Button" HorizontalAlignment="Left" Margin="90,10,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="button2" Content="Button" HorizontalAlignment="Left" Margin="170,10,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="button3" Content="Button" HorizontalAlignment="Left" Margin="250,10,0,0" VerticalAlignment="Top" Width="75"/>
+
+    </Grid>
+</UserControl>

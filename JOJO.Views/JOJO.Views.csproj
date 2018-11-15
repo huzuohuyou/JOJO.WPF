@@ -91,19 +91,20 @@
     <Compile Include="Areas\System\Models\Menus.cs" />
     <Compile Include="Areas\System\Models\ResponseModel.cs" />
     <Compile Include="Areas\System\ViewModels\ButtonsViewModel.cs" />
-    <Compile Include="Areas\System\ViewModels\Flyout1ViewModel.cs" />
     <Compile Include="Areas\System\ViewModels\LeftBarViewModel.cs" />
     <Compile Include="Areas\System\ViewModels\TabControlsViewModel.cs" />
     <Compile Include="Areas\System\ViewModels\TreeViewsViewModel.cs" />
     <Compile Include="Areas\System\ViewModels\UserControlViewModel.cs" />
     <Compile Include="CustomWindowManager.cs" />
     <Compile Include="Utils\Ajax.cs" />
+    <Compile Include="Utils\BindableObject.cs" />
     <Compile Include="Utils\HttpHelper.cs" />
     <Compile Include="Utils\PasswordBoxBindingHelper.cs" />
     <Compile Include="Utils\PasswordHelper.cs" />
     <Compile Include="ViewModels\Account\LoginViewModel.cs" />
+    <Compile Include="ViewModels\Account\UserModel.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
-    <Page Include="Areas\System\Views\Flyout1View.xaml">
+    <Page Include="Areas\System\Views\UserView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

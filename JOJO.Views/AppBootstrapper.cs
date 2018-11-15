@@ -78,7 +78,7 @@ namespace Sugar.WPF
             //if (ok.HasValue && ok.Value)
             //{
             //    Application.Current.ShutdownMode = ShutdownMode.OnMainWindowClose;
-                DisplayRootViewFor<IShell>();
+            DisplayRootViewFor<IShell>();
             //}
         }
     }

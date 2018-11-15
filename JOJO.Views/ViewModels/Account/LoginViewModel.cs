@@ -13,8 +13,18 @@ namespace Sugar.WPF.ViewModels.Account
     [Export(typeof(LoginViewModel))]
     public class LoginViewModel : Screen, IShell
     {
+    #if DEBUG
+        private string _userName;
+        private string _passWord;
+        public string UserName { get { return "admin"; } set { _userName = value; } }
+        public string PassWord { get { return "wuhailong123"; } set { _passWord = value; } }
+    #else
         public string UserName { get; set; }
         public string PassWord { get; set; }
+    #endif
+
+
+
 
         private readonly IWindowManager _windowManager;
 
@@ -32,9 +42,12 @@ namespace Sugar.WPF.ViewModels.Account
                 password = MD5Encrypt32( PassWord),
             })
             {
-                url = @"http://localhost:17924/Account/Login",
+                url = @"http://192.168.2.11:8095/Account/Login",
             }.Post();
-            base.TryClose(true);
+            if (response.state == "1")
+            {
+                TryClose(true);
+            }
             return response.data;
         }
         /// <summary>

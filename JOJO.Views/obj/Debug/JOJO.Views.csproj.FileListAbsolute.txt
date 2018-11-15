@@ -54,13 +54,11 @@ D:\GitHub\JOJO.WPF\Sugar.WPF\obj\Debug\Areas\System\Views\_404View.baml
 D:\GitHub\JOJO.WPF\Sugar.WPF\obj\Debug\Areas\System\Views\_404View.g.cs
 D:\GitHub\JOJO.WPF\JOJO.Views\obj\Debug\JOJO.Views.csprojResolveAssemblyReference.cache
 D:\GitHub\JOJO.WPF\JOJO.Views\obj\Debug\JOJO.Views.csproj.Sugar.WPF.exe.config
-D:\GitHub\JOJO.WPF\JOJO.Views\obj\Debug\Areas\System\Views\Flyout1View.baml
 D:\GitHub\JOJO.WPF\JOJO.Views\obj\Debug\Areas\System\Views\_404View.baml
 D:\GitHub\JOJO.WPF\JOJO.Views\obj\Debug\Areas\System\Views\IndexView.baml
 D:\GitHub\JOJO.WPF\JOJO.Views\obj\Debug\Areas\System\Views\TabControlsView.baml
 D:\GitHub\JOJO.WPF\JOJO.Views\obj\Debug\Areas\System\Views\TreeViewsView.baml
 D:\GitHub\JOJO.WPF\JOJO.Views\obj\Debug\Areas\System\Views\UserControlView.baml
-D:\GitHub\JOJO.WPF\JOJO.Views\obj\Debug\Areas\System\Views\Flyout1View.g.cs
 D:\GitHub\JOJO.WPF\JOJO.Views\obj\Debug\Areas\System\Views\_404View.g.cs
 D:\GitHub\JOJO.WPF\JOJO.Views\obj\Debug\Areas\System\Views\IndexView.g.cs
 D:\GitHub\JOJO.WPF\JOJO.Views\obj\Debug\Areas\System\Views\TabControlsView.g.cs
@@ -106,3 +104,5 @@ D:\GitHub\JOJO.WPF\JOJO.Views\obj\Debug\Views\MainWindowView.baml
 D:\GitHub\JOJO.WPF\JOJO.Views\obj\Debug\Sugar.WPF.g.resources
 D:\GitHub\JOJO.WPF\JOJO.Views\obj\Debug\Sugar.WPF.Properties.Resources.resources
 D:\GitHub\JOJO.WPF\JOJO.Views\obj\Debug\JOJO.Views.csproj.GenerateResource.Cache
+D:\GitHub\JOJO.WPF\JOJO.Views\obj\Debug\Areas\System\Views\UserView.baml
+D:\GitHub\JOJO.WPF\JOJO.Views\obj\Debug\Areas\System\Views\UserView.g.cs
